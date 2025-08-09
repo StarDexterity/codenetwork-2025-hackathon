@@ -1,19 +1,26 @@
 import { useCassette } from "./cassetteContext";
 import cassetteImage from "./assets/cassette-tape.png";
+import { useState } from "react";
 
 function Card({ cassette }) {
   const { setSelectedCassette } = useCassette();
+  const [isShaking, setIsShaking] = useState(false);
 
   const onClick = () => {
     console.log("onclick " + cassette.title);
     setSelectedCassette(cassette);
+
+     // Trigger shake animation
+    setIsShaking(true);
+    setTimeout(() => setIsShaking(false), 350); // match animation duration
   };
 
   return (
     <div
       className={
-        "col-12 col-sm-6 col-md-4 col-lg-3 flex" +
-        (cassette.isEnabled ? "" : " cassette-disabled")
+        "col-12 col-sm-6 col-md-4 col-lg-3 flex" 
+        + (cassette.isEnabled ? "" : " cassette-disabled") 
+        + (isShaking ? " shake" : "")
       }
     >
       <div
