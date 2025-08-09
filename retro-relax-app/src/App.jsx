@@ -108,7 +108,7 @@ function App() {
             {/* <a href="#" className="text-light mx-2"><i className="bi bi-vinyl"></i></a> */}
           </div>
 
-          <p className="small mb-0">&copy; 1984-{new Date().getFullYear()} Retro Relax. All rights reserved.</p>
+          <p className="small mb-0">&copy; 2025 Retro Relax. All rights reserved.</p>
         </div>
       </footer>
     </>
