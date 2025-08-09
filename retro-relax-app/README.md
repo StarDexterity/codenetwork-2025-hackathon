@@ -1,18 +1,63 @@
-# Retro Relax Front End Application
-## React + Vite
+# 🎙️ Celebrity Retro Relax  
+*Where nostalgia meets mindfulness — meditate with your favorite celebrity voices.*  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Celebrity Retro Relax is a **web-based guided meditation app** that blends vintage charm with calming meditation sessions, narrated by the voices of iconic celebrities. Built with **React** and **Vite**, it’s fast, responsive, and designed to deliver a relaxing experience straight from your browser.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features  
+- 🧘 **Celebrity-Guided Sessions** – Enjoy relaxing meditations narrated by classic celebrity personalities.  
+- 🎨 **Retro Aesthetic** – Nostalgic visuals, soft color palettes, and subtle animations for total immersion.  
+- ⚡ **Lightning Fast** – Powered by **Vite** with hot module replacement (HMR) for instant development updates.  
+- 🛠 **Modular React Components** – Easily extendable with new meditations, celebrities, or themes.  
+- 📱 **Responsive Design** – Works beautifully across desktop, tablet, and mobile devices.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🖼️ Preview  
+![Celebrity Retro Relax Screenshot](./screenshot.png)
 
-## Set-up
-1. Install node (may need to update pre-existing install)
-2. npm install
-3. npm run dev
+---
+
+## 🗂 Tech Stack  
+- **Frontend:** [React](https://react.dev/) + [Vite](https://vitejs.dev/)  
+- **Plugins:**  
+  - [`@vitejs/plugin-react`](https://www.npmjs.com/package/@vitejs/plugin-react) – Babel-based Fast Refresh  
+  - [`@vitejs/plugin-react-swc`](https://www.npmjs.com/package/@vitejs/plugin-react-swc) – SWC-based Fast Refresh (alternative)  
+- **Linting:** ESLint (configurable; can be expanded with TypeScript type-aware rules)  
+
+---
+
+## 🚀 Getting Started  
+
+### 1️⃣ Prerequisites  
+- Install [Node.js](https://nodejs.org/) (LTS version recommended).  
+- Update Node.js if already installed (`node -v` to check your version).  
+
+### 2️⃣ Installation  
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/celebrity-retro-relax.git
+
+# Enter the project folder
+cd celebrity-retro-relax
+
+# Install dependencies
+npm install
+
+### 3️⃣ Run the Development Server
+npm run dev
+
+Your app will be available at:
+http://localhost:5173
+
+## 📌 Roadmap
+🎤 Add more celebrity voices & themed meditation packs
+🌙 Dark mode toggle
+🌐 Multi-language support
+📱 Offline mode for mobile
+📜 License
+MIT License © 2025 Your Name
+
+
+
