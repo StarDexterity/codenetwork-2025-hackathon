@@ -3,6 +3,7 @@ import Card from './card.jsx'
 import { FetchCassetes } from './api.jsx'
 import MusicPlayer from './musicplayer.jsx'
 import { useCassette } from "./cassetteContext";
+import "bootstrap-icons/font/bootstrap-icons.css"
 
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -41,7 +42,7 @@ function App() {
             <div
               key={i}
               className="bar"
-              style={{ animationDelay: `${(i * 0.1) % 1}s` }}
+              style={{ animationDelay: `${(i * 0.075) % 1}s` }}
             ></div>
           ))}
         </div>
@@ -90,13 +91,12 @@ function App() {
         <div className="container">
           <h5 className="mb-3">RETRO RELAX</h5>
           <p className="small">
-            Bringing back the cassette era, one vibe at a time.
+            Bringing back the retro era, one chill at a time.
             No rewinding fees. No batteries required.
           </p>
 
           <div className="mb-3">
             <a href="#" className="text-light mx-2">Home</a> |
-            <a href="#" className="text-light mx-2">Mixtapes</a> |
             <a href="#" className="text-light mx-2">About</a> |
             <a href="#" className="text-light mx-2">Contact</a>
           </div>
@@ -105,7 +105,7 @@ function App() {
             <a href="#" className="text-light mx-2"><i className="bi bi-facebook"></i></a>
             <a href="#" className="text-light mx-2"><i className="bi bi-twitter"></i></a>
             <a href="#" className="text-light mx-2"><i className="bi bi-instagram"></i></a>
-            <a href="#" className="text-light mx-2"><i className="bi bi-vinyl"></i></a>
+            {/* <a href="#" className="text-light mx-2"><i className="bi bi-vinyl"></i></a> */}
           </div>
 
           <p className="small mb-0">&copy; 1984-{new Date().getFullYear()} Retro Relax. All rights reserved.</p>
