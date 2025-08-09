@@ -3,15 +3,14 @@ import { Play, Pause, X } from "lucide-react";
 import { useCassette } from "./cassetteContext";
 
 function MusicPlayer() {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
-  const { selectedCassette, setSelectedCassette } = useCassette()
-  const [url, setUrl] = useState(null)
+  const { selectedCassette, setSelectedCassette } = useCassette();
+  const [url, setUrl] = useState(null);
 
   const togglePlay = (play) => {
     if (!audioRef.current) return;
-    console.log("togglePlay(" + play + ")")
     if (play) {
       audioRef.current.play();
     } else {
@@ -33,25 +32,33 @@ function MusicPlayer() {
       setVisible(true);
       setUrl(selectedCassette.soundUrl);
     }
-  }, [selectedCassette])
+  }, [selectedCassette]);
 
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-gray-900 text-white flex items-center justify-between p-4 shadow-lg">
+    <div className="retro-player fixed bottom-0 left-0 w-full text-white flex items-center justify-between p-4 shadow-lg">
       <audio ref={audioRef} src={selectedCassette.soundUrl} />
 
+      {/* Left Reel */}
+      <div className={`reel ${isPlaying ? "spin" : ""}`}></div>
+
+      {/* Controls & Title */}
       <div className="flex items-center space-x-4">
         <button
           onClick={() => togglePlay(!isPlaying)}
-          className="p-2 bg-gray-700 rounded-full hover:bg-gray-600"
+          className="play-btn"
         >
-          {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+          {isPlaying ? <Pause size={24} /> : <Play size={24} />}
         </button>
-        <span className="text-sm ps-2 truncate max-w-[200px]">{selectedCassette.title}</span>
-      </div>
+
+          <div className="track-title ms-2">{selectedCassette.title}</div>
+        </div>
+
+      {/* Right Reel */}
+      <div className={`reel ${isPlaying ? "spin" : ""}`}></div>
     </div>
   );
 }
 
-export default MusicPlayer
+export default MusicPlayer;
