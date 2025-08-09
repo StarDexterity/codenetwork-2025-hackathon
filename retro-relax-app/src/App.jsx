@@ -110,6 +110,7 @@ function App() {
 
           <p className="small mb-0">&copy; 2025 Retro Relax. All rights reserved.</p>
         </div>
+        <div style={{height:"100px"}}></div>
       </footer>
     </>
   )
