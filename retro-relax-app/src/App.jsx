@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react'
-import './App.css'
 import Card from './card.jsx'
 import { FetchCassetes, Cassette } from './api.jsx'
 import MusicPlayer from './musicplayer.jsx'
+
+// import css
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootstrap/dist/js/bootstrap.bundle.min'; // Import Bootstrap JS
 
 function App() {
   const [cassettes, setCassettes] = useState([]);
@@ -19,17 +23,19 @@ function App() {
 
   return (
     <>
-      <h1>Retro Relax App</h1>
-      <div className='card-group row'>
-        {cassettes.map(x => (
-          <Card key={x.cassetteId} cassette={x} onPlay={onPlay} />
-        )
-        )}
+      <div className="container mx-auto py-12 px-4 md:px-6 lg:px-8">
+        <h1 className="display-1" >RETRO RELAX</h1>
+
+        <div className="row g-4 justify-content-center my-media-grid">
+          {cassettes.map(x => (
+            <Card key={x.cassetteId} cassette={x} onPlay={onPlay} />
+          ))}
+        </div>
+        <MusicPlayer
+          url="./assets/SoundHelix-Song-1.mp3"
+          visible={showPlayer}
+        />
       </div>
-      <MusicPlayer
-        url="./assets/SoundHelix-Song-1.mp3"
-        visible={showPlayer}
-      />
     </>
   )
 }

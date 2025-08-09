@@ -1,42 +1,146 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles.css */
+
+/* Custom styles for rounded corners and overall aesthetics */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Using Inter font as per guidelines */
+    /* The background image for the body can also be moved here if you remove the inline style from the body tag in HTML */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: auto;
+    height: auto
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.display-1 {
+    color: #fff;
+    /* Bright text for dark background */
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    /* Add a multi-layered text shadow for depth + glow */
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.6),
+        0 0 15px rgba(0, 191, 255, 0.7),
+        0 0 25px rgba(0, 191, 255, 0.6);
+
+    /* Optional background highlight */
+    background: rgba(0, 191, 255, 0.08);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    /* Soft outer box shadow to lift it off background */
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(0, 191, 255, 0.5);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.media-grid {
+    padding: 100px;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.media-card {
+    padding: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+    /* More rounded corners */
+    overflow: hidden;
+    /* Ensures content respects border-radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Soft shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-color: #ffffff;
+    background-image: url('');
+    background-position: center;
+    background-size: cover;
 }
 
-.card {
-  padding: 2em;
+.media-card:hover {
+    transform: translateY(-5px);
+    /* Slight lift on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    /* Enhanced shadow on hover */
+    background-color: rgb(158, 196, 227);
+    background-position: center;
+    background-size: cover;
 }
 
-.read-the-docs {
-  color: #888;
+.media-thumbnail {
+    width: 25px;
+    /* Changed to 50px as requested for all thumbnails in this class */
+    height: 25px;
+    /* Changed to 50px as requested for all thumbnails in this class */
+    object-fit: cover;
+    /* Ensures image covers the area */
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.btn-play {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    /* Rounded button */
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(106, 17, 203, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-play:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(106, 17, 203, 0.4);
+    filter: brightness(1.1);
+}
+
+.modal-content {
+    border-radius: 1rem;
+    /* Rounded modal corners */
+    overflow: hidden;
+}
+
+.modal-body-player {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+.modal-body-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0.75rem;
+}
+
+.cassette {
+    border: 1px solid greenyellow;
+    height: 200px;
+    max-width: 100px;
+}
+
+h1 {
+    color: bisque;
+}
+
+.my-media-grid {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
 }

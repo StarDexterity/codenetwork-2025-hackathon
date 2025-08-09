@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Play, Pause, X } from "lucide-react";
-import sampleTrack from "./assets/sample.mp3"; 
+import sampleTrack from "./assets/output.wav"; 
 
 function MusicPlayer({ url, visible = true }) {
   const [isPlaying, setIsPlaying] = useState(false);

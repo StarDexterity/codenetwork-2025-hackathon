@@ -13,20 +13,45 @@ export class Cassette {
 const CASSETTE_DATA = [
   new Cassette(
     1,
-    "Golden Hits 90s",
-    "https://via.placeholder.com/150?text=Golden+Hits+90s",
+    "Morgan Freeman",
+    "/snoop.jpg",
     null,
     true
   ),
   new Cassette(
     2,
-    "Retro Vibes",
-    "https://via.placeholder.com/150?text=Retro+Vibes"
+    "Morgan Freeman",
+    "/snoop.jpg"
   ),
   new Cassette(
     3,
-    "Mixtape Classics",
-    "https://via.placeholder.com/150?text=Mixtape+Classics"
+    "Morgan Freeman",
+    "/snoop.jpg"
+  ),
+  new Cassette(
+    4,
+    "Morgan Freeman",
+    "/snoop.jpg"
+  ),
+  new Cassette(
+    5,
+    "Morgan Freeman",
+    "/snoop.jpg"
+  ),
+  new Cassette(
+    6,
+    "Morgan Freeman",
+    "/snoop.jpg"
+  ),
+  new Cassette(
+    7,
+    "Morgan Freeman",
+    "/snoop.jpg"
+  ),
+  new Cassette(
+    8,
+    "Morgan Freeman",
+    "/snoop.jpg"
   ),
 ];
 
