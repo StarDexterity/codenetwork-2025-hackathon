@@ -15,43 +15,46 @@ const CASSETTE_DATA = [
     1,
     "Morgan Freeman",
     "/snoop.jpg",
-    null,
+    "/output.wav",
     true
   ),
   new Cassette(
     2,
-    "Morgan Freeman",
+    "Winona Ryder",
     "/snoop.jpg"
   ),
   new Cassette(
     3,
-    "Morgan Freeman",
+    "Will Smith",
     "/snoop.jpg"
   ),
   new Cassette(
     4,
-    "Morgan Freeman",
+    "Tiffani Thiessen",
     "/snoop.jpg"
   ),
   new Cassette(
     5,
-    "Morgan Freeman",
+    "Kurt Cobain",
     "/snoop.jpg"
   ),
   new Cassette(
     6,
-    "Morgan Freeman",
+    "Sarah Michelle Gellar",
     "/snoop.jpg"
   ),
   new Cassette(
     7,
-    "Morgan Freeman",
+    "Leonardo DiCaprio",
     "/snoop.jpg"
   ),
   new Cassette(
     8,
-    "Morgan Freeman",
-    "/snoop.jpg"
+    "Beep Test",
+    null,
+    "/beeptest.mp3",
+    true
+
   ),
 ];
 

@@ -144,3 +144,11 @@ h1 {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+/* Disabled (greyed out) state */
+.cassette-disabled {
+  opacity: 0.5; /* Make it faded */
+  pointer-events: none; /* Disable clicks */
+  filter: grayscale(100%); /* Optional: make it fully grey */
+  cursor: not-allowed;
+}
