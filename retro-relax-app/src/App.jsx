@@ -32,7 +32,7 @@ function App() {
           RETRO RELAX
         </h1>
         <p className="retro-subtitle text-center">
-          Cassette vibes from another time
+          AI Generated Celebrity Guided Meditation
         </p>
 
         {/* Equalizer */}

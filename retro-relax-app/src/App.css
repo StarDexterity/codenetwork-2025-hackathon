@@ -213,19 +213,20 @@ h1 {
 
 .retro-title {
     font-family: 'Monoton', cursive;
-    font-size: 4rem;
-    background: linear-gradient(90deg, #ff8a00, #e52e71, #ff8a00);
+    font-size: 4.5rem;
+    background: #ff8a00;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 5px #ff88008a, 0 0 10px #e52e71, 0 0 20px #ff88008a;
-    animation: neon-glow 2s ease-in-out infinite alternate;
+    /* text-shadow: 0 0 5px #ff88008a, 0 0 10px #e52e71, 0 0 20px #ff88008a; */
+    /* animation: neon-glow 2s ease-in-out infinite alternate; */
 }
 
 .retro-subtitle {
     font-family: 'Courier New', monospace;
+    font-weight: bold;
     font-size: 1.2rem;
-    color: #ffd27f;
-    text-shadow: 0 0 5px rgba(255, 138, 0, 0.5);
+    color: #ff8a00;
+    /* text-shadow: 0 0 5px rgba(255, 138, 0, 0.5); */
     margin-top: -0.5rem;
 }
 
