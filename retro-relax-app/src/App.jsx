@@ -1,33 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
+import Card from './card.jsx'
+import { FetchCassetes, Cassette } from './api.jsx'
+import MusicPlayer from './musicplayer.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cassettes, setCassettes] = useState([]);
+  const [selectedCassette, setSelectedCassette] = useState(null);
+  const [showPlayer, setShowPlayer] = useState(false);
+
+  useEffect(() => {
+    FetchCassetes().then((data) => setCassettes(data));
+  }, []);
+
+  const onPlay = () => {
+    setShowPlayer(!showPlayer)
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1>Retro Relax App</h1>
+      <div className='card-group row'>
+        {cassettes.map(x => (
+          <Card key={x.cassetteId} cassette={x} onPlay={onPlay} />
+        )
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <MusicPlayer
+        url="./assets/SoundHelix-Song-1.mp3"
+        visible={showPlayer}
+      />
     </>
   )
 }
