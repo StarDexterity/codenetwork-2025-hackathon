@@ -352,17 +352,30 @@ h1 {
 }
 
 body {
-  background-image: url('/background.png'); /* your image */
-  background-size: cover; /* or 'contain' if you want full image in view */
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* stays still while scrolling */
-  background-position: center;
   margin: 0;
   padding: 0;
+  position: relative;
+  overflow-x: hidden; /* avoid scrollbars if blur extends edges */
 }
 
-/* Optional: overlay to make text stand out */
+/* Blurred background layer */
 body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/background.png');
+  background-size: 130%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(10px); /* adjust blur amount */
+  z-index: -2; /* keep it behind everything */
+}
+
+/* Dark overlay for text contrast */
+body::after {
   content: "";
   position: fixed;
   top: 0;
